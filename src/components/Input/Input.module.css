@@ -1,0 +1,18 @@
+label {
+  font-size: 4rem;
+}
+
+input {
+  width: 100%;
+  background-color: var(--C-background);
+  outline: none;
+  border: 1px solid var(--C-typo);
+  color: var(--C-typo);
+  padding: 1rem 1rem;
+}
+
+input:focus {
+  outline: none; 
+  border: 1px solid #c78d36;
+  box-shadow: 0 0 2px #7a5b2d; 
+}
