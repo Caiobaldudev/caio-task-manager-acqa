@@ -1,18 +1,23 @@
+.inputWrap {
+  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
 label {
-  font-size: 4rem;
+  font-size: 3.5rem;
 }
 
 input {
-  width: 100%;
   background-color: var(--C-background);
   outline: none;
   border: 1px solid var(--C-typo);
   color: var(--C-typo);
-  padding: 1rem 1rem;
+  padding: 1.5rem 1.5rem;
 }
 
 input:focus {
-  outline: none; 
-  border: 1px solid #c78d36;
-  box-shadow: 0 0 2px #7a5b2d; 
+  outline: none;
+  border: 1px solid var(--Cb-button);
+  box-shadow: 0 0 2px #7a5b2d;
 }

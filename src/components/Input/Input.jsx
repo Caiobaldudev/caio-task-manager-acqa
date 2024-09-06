@@ -1,5 +1,5 @@
 import React from "react";
-import './Input.module.css'
+import styles from'./Input.module.css'
 
 const Input = ({
   id,
@@ -12,7 +12,7 @@ const Input = ({
   error,
 }) => {
   return (
-    <div className="inputWrap">
+    <div className={styles.inputWrap}>
       <label htmlFor={id}>{label}</label>
       <input
         id={id}
