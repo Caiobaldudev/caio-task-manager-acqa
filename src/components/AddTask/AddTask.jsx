@@ -7,10 +7,19 @@ const AddTask = () => {
   const [task, setTask] = React.useState("");
   const { dispatch } = useToDo();
 
+  const toCamelCase = (str) => {
+    return str
+      .toLowerCase()
+      .split(" ")
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(" ");
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (task.trim()) {
-      dispatch({ type: 'ADD_TASK', payload: task });  
+      const formattedTask = toCamelCase(task);
+      dispatch({ type: 'ADD_TASK', payload: formattedTask });  
       setTask(""); 
     }
   };
