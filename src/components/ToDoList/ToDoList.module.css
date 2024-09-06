@@ -1,0 +1,89 @@
+.filters {
+  display: flex;
+  gap: 1rem;
+}
+
+.filters button {
+  padding: 1.5rem;
+  border: 1px solid transparent;
+  border-color: linear-gradient(
+      to right,
+      transparent,
+      var(--Cb-button),
+      transparent
+    )
+    1;
+  background-color: var(--C-background);
+  transition: border-color 0.1s ease-in-out, background-color 0.1s ease;
+  position: relative;
+}
+
+.filters button:hover {
+  cursor: pointer;
+  border-color: transparent;
+  transition: border-color 0.1s ease-in-out;
+}
+
+.filters button.active {
+  border-color: transparent;
+}
+
+.listContainer {
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+
+.listContainer li {
+  display: flex;
+}
+
+.listContainer ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.listContainer span {
+  font-size: 2rem;
+  margin-left: 0.5rem;
+}
+
+.listContainer li input[type="checkbox"] {
+  display: none;
+}
+
+.listContainer li label {
+  display: inline-block;
+  position: relative;
+  padding-left: 2rem;
+  cursor: pointer;
+  line-height: 1.5;
+  user-select: none;
+}
+
+.listContainer li label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 59%;
+  transform: translateY(-50%);
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 1px solid var(--C-typo);
+  background-color: var(--C-background);
+  border-radius: 2px;
+}
+
+.listContainer li input[type="checkbox"]:checked + label::before {
+  background-color: var(--C-background);
+  border-color: var(--C-typo);
+}
+
+.listContainer li input[type="checkbox"]:checked + label::after {
+  content: "✓";
+  position: absolute;
+  left: 0.3rem;
+  top: 60%;
+  transform: translateY(-50%);
+  color: var(--C-typo);
+  font-size: 1.5rem;
+}
