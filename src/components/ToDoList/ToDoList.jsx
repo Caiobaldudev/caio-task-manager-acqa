@@ -10,6 +10,10 @@ const ToDoList = () => {
     dispatch({ type: "TOGGLE_TASK", payload: id });
   };
 
+  const handleDelete = (id) => {
+    dispatch({ type: "DELETE_TASK", payload: id });
+  };
+
   const handleFilterChange = (newFilter) => {
     setFilter(newFilter);
   };
@@ -67,6 +71,11 @@ const ToDoList = () => {
                     {task.name}
                   </span>
                 </label>
+                {task.completed && (
+                  <button onClick={() => handleDelete(task.id)} className={styles.deleteButton}>
+                    x
+                  </button>
+                )}
               </li>
             ))
           ) : (

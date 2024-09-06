@@ -87,3 +87,13 @@
   color: var(--C-typo);
   font-size: 1.5rem;
 }
+
+.deleteButton {
+  background-color: transparent;
+  border: none;
+  transform: translateY(8%);
+  color: #c87e10;
+  cursor: pointer;
+  font-size: 2rem;
+  margin-left: 10px;
+}
