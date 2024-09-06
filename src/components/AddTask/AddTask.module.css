@@ -1,0 +1,23 @@
+.taskContainer {
+  display: flex;
+}
+
+form {
+  display: flex; 
+  gap: 1rem;
+  align-items: end;
+}
+
+form button {
+  bottom: 0;
+  border: 1px solid;
+  background-color: var(--C-background);
+  padding: 1.5rem;
+  transition: .5s ease-in-out;
+}
+
+form button:hover {
+  cursor: pointer;
+  background-color: var(--Cb-button);
+  transition: .5s ease-in-out;
+}
