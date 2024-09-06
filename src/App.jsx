@@ -8,7 +8,7 @@ const App = () => {
   return (
     <ToDoProvider>
     <div className="container">
-      <h1>Gerencie suas tarefas</h1>
+      <h1>Gerencie as tarefas do seu dia.</h1>
       <AddTask />
       <ToDoList />
     </div>
